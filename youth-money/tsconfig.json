@@ -2,10 +2,13 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
+    "baseUrl": ".", // 현재 디렉토리를 기준으로 설정
     "paths": {
-      "@/*": ["./*"]
-    },
-    "baseUrl": "app"
+      "@app/*": ["app/*"], // app 디렉토리
+      "@assets/*": ["assets/*"], // assets 디렉토리
+      "@components/*": ["components/*"], // components 디렉토리
+      "@constants/*": ["constants/*"] // constants 디렉토리
+    }
   },
   "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"]
 }
